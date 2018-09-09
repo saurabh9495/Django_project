@@ -34,11 +34,11 @@ Basic Usage And Xml Parsing
 Input file is taken as box2.xml i.e that contains data regarding vulnerabilities etc in a xml format,
 we are extracting specific information such as <b>name of vulnerability, severity, confidence, url path</b>
 
-Path of box2.xml -->  <b> cd /Django_project/xmlparser/templates/xmlparser/data</b>
+Path of box2.xml -->  <b> cd Django_project/xmlparser/templates/xmlparser/data</b>
 
 We are using xml.etree for parsing XML file the parser file is present at,
 
-Path of parser.py --> <b> cd /Django_project/xmlparser/templates/xmlparser/</b>
+Path of parser.py --> <b> cd Django_project/xmlparser/templates/xmlparser/</b>
 
 
 Parsing of Xml file in commandline
