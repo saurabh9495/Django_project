@@ -1,0 +1,460 @@
+{% extends "xmlparser/header.html" %}
+{% block content %}
+
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <a class="navbar-brand" href="/record/">Recorded Database</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<table id="example" class="table table-striped table-bordered" style="width:100%">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>NAME</th>
+      <th>SEVERITY</th>
+      <th>CONFIDENCE</th>
+      <th>URL PATH</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td> Cleartext submission of password</td>
+      <td> High</td>
+      <td> Certain</td>
+      <td> http://localhost/dvwa/login.php</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td> Interesting response</td>
+      <td> High</td>
+      <td> Firm</td>
+      <td> http://localhost/server-status</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td> Interesting input handling: MySQL injection</td>
+      <td> Medium</td>
+      <td>Firm</td>
+      <td> http://localhost/dvwa/vulnerabilities/sqli/</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td> Unencrypted communications</td>
+      <td> Low</td>
+      <td> Certain</td>
+      <td> http://localhost/</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td> Content Sniffing not disabled</td>
+      <td> Low</td>
+      <td> Certain</td>
+      <td> http://localhost/dvwa/</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td> Content Sniffing not disabled</td>
+      <td> Low</td>
+      <td> Certain</td>
+      <td> http://localhost/dvwa/dvwa/js/dvwaPage.js</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td> Content Sniffing not disabled</td>
+      <td> Low</td>
+      <td> Certain</td>
+      <td> http://localhost/dvwa/index.php</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td> Content Sniffing not disabled</td>
+      <td> Low</td>
+      <td> Certain</td>
+      <td> http://localhost/dvwa/login.php</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td> Content Sniffing not disabled</td>
+      <td> Low</td>
+      <td> Certain</td>
+      <td> http://localhost/dvwa/phpinfo.php</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td> Content Sniffing not disabled</td>
+      <td> Low</td>
+      <td> Certain</td>
+      <td> http://localhost/dvwa/phpinfo2.php</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td> Content Sniffing not disabled</td>
+      <td> Low,</td>
+      <td> Certain</td>
+      <td> http://localhost/dvwa/security.php</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td> Content Sniffing not disabled</td>
+      <td> Low</td>
+      <td> Certain</td>
+      <td> http://localhost/dvwa/vulnerabilities/exec/</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td> Content Sniffing not disabled</td>
+      <td> Low</td>
+      <td> Certain</td>
+      <td> http://localhost/dvwa/vulnerabilities/javascript/</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td> Content Sniffing not disabled</td>
+      <td> Low</td>
+      <td> Certain</td>
+      <td> http://localhost/dvwa/vulnerabilities/sqli/</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td> Content Sniffing not disabled</td>
+      <td> Low</td>
+      <td> Certain</td>
+      <td> http://localhost/dvwa/vulnerabilities/sqli_blind/</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td> Content Sniffing not disabled</td>
+      <td> Low</td>
+      <td> Certain</td>
+      <td> http://localhost/dvwa/vulnerabilities/xss_r/</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td> Browser cross-site scripting filter misconfiguration</td>
+      <td> Low</td>
+      <td> Certain</td>
+      <td> http://localhost/dvwa/</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td> Browser cross-site scripting filter misconfiguration</td>
+      <td> Low</td>
+      <td> Certain</td>
+      <td> http://localhost/dvwa/dvwa/js/dvwaPage.js</td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td> Browser cross-site scripting filter misconfiguration</td>
+      <td> Low</td>
+      <td> Certain</td>
+      <td> http://localhost/dvwa/index.php</td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td> Browser cross-site scripting filter misconfiguration</td>
+      <td> Low</td>
+      <td> Certain</td>
+      <td> http://localhost/dvwa/login.php</td>
+    </tr>
+    <tr>
+      <td>21</td>
+      <td> Browser cross-site scripting filter misconfiguration</td>
+      <td> Low</td>
+      <td> Certain</td>
+      <td> http://localhost/dvwa/phpinfo.php</td>
+    </tr>
+    <tr>
+      <td>22</td>
+      <td> Browser cross-site scripting filter misconfiguration</td>
+      <td> Low</td>
+      <td> Certain</td>
+      <td> http://localhost/dvwa/phpinfo2.php</td>
+    </tr>
+    <tr>
+      <td>23</td>
+      <td> Browser cross-site scripting filter misconfiguration</td>
+      <td> Low</td>
+      <td> Certain</td>
+      <td> http://localhost/dvwa/security.php</td>
+    </tr>
+    <tr>
+      <td>24</td>
+      <td> Browser cross-site scripting filter misconfiguration</td>
+      <td> Low</td>
+      <td> Certain</td>
+      <td> http://localhost/dvwa/vulnerabilities/exec/</td>
+    </tr>
+    <tr>
+      <td>25</td>
+      <td> Browser cross-site scripting filter misconfiguration</td>
+      <td> Low</td>
+      <td> Certain</td>
+      <td> http://localhost/dvwa/vulnerabilities/javascript/</td>
+    </tr>
+    <tr>
+      <td>26</td>
+      <td> Browser cross-site scripting filter misconfiguration</td>
+      <td> Low</td>
+      <td> Certain</td>
+      <td> http://localhost/dvwa/vulnerabilities/sqli/</td>
+    </tr>
+    <tr>
+      <td>27</td>
+      <td> Browser cross-site scripting filter misconfiguration</td>
+      <td> Low</td>
+      <td> Certain</td>
+      <td> http://localhost/dvwa/vulnerabilities/sqli_blind/</td>
+    </tr>
+    <tr>
+      <td>28</td>
+      <td> Browser cross-site scripting filter misconfiguration</td>
+      <td> Low</td>
+      <td> Certain</td>
+      <td> http://localhost/dvwa/vulnerabilities/xss_r/</td>
+    </tr>
+    <tr>
+      <td>29</td>
+      <td> Software Version Numbers Revealed</td>
+      <td> Low</td>
+      <td> Certain</td>
+      <td> http://localhost/</td>
+    </tr>
+    <tr>
+      <td>30</td>
+      <td> Software Version Numbers Revealed</td>
+      <td> Low</td>
+      <td> Certain</td>
+      <td> http://localhost/dvwa/</td>
+    </tr>
+    <tr>
+      <td>31</td>
+      <td> J2EEScan - Apache/Jboss Status Servlet - Information Disclosure</td>
+      <td> Low</td>
+      <td> Certain</td>
+      <td> http://localhost/dvwa/vulnerabilities/sqli/</td>
+    </tr>
+    <tr>
+      <td>32</td>
+      <td> Cookie without HttpOnly flag set</td>
+      <td> Low</td>
+      <td> Firm</td>
+      <td> http://localhost/dvwa/</td>
+    </tr>
+    <tr>
+      <td>33</td>
+      <td> Cookie without HttpOnly flag set</td>
+      <td> Low</td>
+      <td> Firm</td>
+      <td> http://localhost/dvwa/login.php</td>
+    </tr>
+    <tr>
+      <td>34</td>
+      <td> Cookie without HttpOnly flag set</td>
+      <td> Low</td>
+      <td> Firm</td>
+      <td> http://localhost/dvwa/phpinfo.php</td>
+    </tr>
+    <tr>
+      <td>35</td>
+      <td> Cookie without HttpOnly flag set</td>
+      <td> Low</td>
+      <td> Firm</td>
+      <td> http://localhost/dvwa/security.php</td>
+    </tr>
+    <tr>
+      <td>36</td>
+      <td> Source code disclosure</td>
+      <td> Low</td>
+      <td> Tentative</td>
+      <td> http://localhost/dvwa/phpinfo2.php</td>
+    </tr>
+    <tr>
+      <td>37</td>
+      <td> Interesting input handling: Backend Parameter Injection</td>
+      <td> Low</td>
+      <td> Tentative</td>
+      <td> http://localhost/dvwa/vulnerabilities/exec/</td>
+    </tr>
+    <tr>
+      <td>38</td>
+      <td> Cross-domain Referer leakage</td>
+      <td> Information</td>
+      <td> Certain</td>
+      <td> http://localhost/dvwa/vulnerabilities/sqli/</td>
+    </tr>
+    <tr>
+      <td>39</td>
+      <td> Cross-domain Referer leakage</td>
+      <td> Information</td>
+      <td> Certain</td>
+      <td> http://localhost/dvwa/vulnerabilities/sqli_blind/</td>
+    </tr>
+    <tr>
+      <td>40</td>
+      <td> Cross-domain Referer leakage</td>
+      <td> Information</td>
+      <td> Certain</td>
+      <td> http://localhost/dvwa/vulnerabilities/xss_r/</td>
+    </tr>
+    <tr>
+      <td>41</td>
+      <td> Browser cross-site scripting filter disabled</td>
+      <td> Information</td>
+      <td> Certain</td>
+      <td> http://localhost/dvwa/vulnerabilities/xss_r/</td>
+    </tr>
+    <tr>
+      <td>42</td>
+      <td> HTTP TRACE method is enabled</td>
+      <td> Information</td>
+      <td> Certain</td>
+      <td> http://localhost/</td>
+    </tr>
+    <tr>
+      <td>43</td>
+      <td> Frameable response (potential Clickjacking)</td>
+      <td> Information</td>
+      <td> Firm</td>
+      <td> http://localhost/dvwa/index.php</td>
+    </tr>
+    <tr>
+      <td>44</td>
+      <td> Frameable response (potential Clickjacking)</td>
+      <td> Information</td>
+      <td> Firm</td>
+      <td> http://localhost/dvwa/login.php</td>
+    </tr>
+    <tr>
+      <td>45</td>
+      <td> Frameable response (potential Clickjacking)</td>
+      <td> Information</td>
+      <td> Firm</td>
+      <td> http://localhost/dvwa/phpinfo.php</td>
+    </tr>
+    <tr>
+      <td>46</td>
+      <td> Frameable response (potential Clickjacking)</td>
+      <td> Information</td>
+      <td> Firm</td>
+      <td> http://localhost/dvwa/security.php</td>
+    </tr>
+    <tr>
+      <td>47</td>
+      <td> Frameable response (potential Clickjacking)</td>
+      <td> Information</td>
+      <td> Firm</td>
+      <td> http://localhost/dvwa/vulnerabilities/exec/</td>
+    </tr>
+    <tr>
+      <td>48</td>
+      <td> Frameable response (potential Clickjacking)</td>
+      <td> Information</td>
+      <td> Firm</td>
+      <td> http://localhost/dvwa/vulnerabilities/javascript/</td>
+    </tr>
+    <tr>
+      <td>49</td>
+      <td> Frameable response (potential Clickjacking)</td>
+      <td> Information</td>
+      <td> Firm</td>
+      <td> http://localhost/dvwa/vulnerabilities/sqli/</td>
+    </tr>
+    <tr>
+      <td>50</td>
+      <td> Frameable response (potential Clickjacking)</td>
+      <td> Information</td>
+      <td> Firm</td>
+      <td> http://localhost/dvwa/vulnerabilities/sqli_blind/</td>
+    </tr>
+    <tr>
+      <td>51</td>
+      <td> Frameable response (potential Clickjacking)</td>
+      <td> Information</td>
+      <td> Firm</td>
+      <td> http://localhost/dvwa/vulnerabilities/xss_r/</td>
+    </tr>
+    <tr>
+      <td>52</td>
+      <td> Path-relative style sheet import</td>
+      <td> Information</td>
+      <td> Tentative</td>
+      <td> http://localhost/dvwa/index.php</td>
+    </tr>
+    <tr>
+      <td>53</td>
+      <td> Path-relative style sheet import</td>
+      <td> Information</td>
+      <td> Tentative</td>
+      <td> http://localhost/dvwa/login.php</td>
+    </tr>
+    <tr>
+      <td>54</td>
+      <td> Path-relative style sheet import</td>
+      <td> Information</td>
+      <td> Tentative</td>
+      <td> http://localhost/dvwa/security.php</td>
+    </tr>
+    <tr>
+      <td>55</td>
+      <td> Path-relative style sheet import</td>
+      <td> Information</td>
+      <td> Tentative</td>
+      <td> http://localhost/dvwa/vulnerabilities/exec/</td>
+    </tr>
+    <tr>
+      <td>56</td>
+      <td> Path-relative style sheet import</td>
+      <td> Information</td>
+      <td> Tentative</td>
+      <td> http://localhost/dvwa/vulnerabilities/javascript/</td>
+    </tr>
+    <tr>
+      <td>57</td>
+      <td> Path-relative style sheet import</td>
+      <td> Information</td>
+      <td> Tentative</td>
+      <td> http://localhost/dvwa/vulnerabilities/sqli/</td>
+    </tr>
+    <tr>
+      <td>58</td>
+      <td> Path-relative style sheet import</td>
+      <td> Information</td>
+      <td> Tentative</td>
+      <td> http://localhost/dvwa/vulnerabilities/sqli_blind/</td>
+    </tr>
+    <tr>
+      <td>59</td>
+      <td> Path-relative style sheet import</td>
+      <td> Information</td>
+      <td> Tentative</td>
+      <td> http://localhost/dvwa/vulnerabilities/xss_r/</td>
+    </tr>
+  <tfoot>
+    <tr>
+      <th>ID</th>
+      <th>NAME</th>
+      <th>SEVERITY</th>
+      <th>CONFIDENCE</th>
+      <th>URL PATH</th>
+    </tr>
+  </tfoot>
+</table>
+
+<script>
+  $(document).ready(function () {
+    $('#example').DataTable();
+  });
+</script>
+
+{% include 'xmlparser/includes/htmlsnippet.html' %}
+{% endblock %}
