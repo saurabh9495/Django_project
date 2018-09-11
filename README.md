@@ -32,9 +32,9 @@ Installation
 Basic Usage And Xml Parsing
 ----------------------------
 Input file is taken as box2.xml i.e that contains data regarding vulnerabilities etc in a xml format,
-we are extracting specific information such as <b>name of vulnerability, severity, confidence, url path</b>
+we are extracting specific information such as name of vulnerability, severity, confidence, url path
 <b> The input file taken from user is stored in new directory /media and parser picks the files and parses the input and stores 
- the data in a file record.html</b> and redirected to file record.html 
+ the data in a file record.html</b> and webpage is redirected to file record.html 
 
 
 Parsing of Xml file in commandline
